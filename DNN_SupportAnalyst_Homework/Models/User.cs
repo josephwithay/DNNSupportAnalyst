@@ -11,14 +11,26 @@ namespace DNN_SupportAnalyst_Homework.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class User
     {
         public int userID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
+
+        [Display(Name = "Name")]
+        public string name
+        {
+            get
+            {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        [Display(Name = "Username")]
         public string userName { get; set; }
+        [Display(Name = "E-Mail")]
         public string email { get; set; }
+        [Display(Name = "Joined")]
         public Nullable<System.DateTime> joined { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace DNN_SupportAnalyst_Homework.Controllers
         public ActionResult UserList()
         {
             var users = this.UserDB.Users;
-            ViewBag.Message = "List of user currently registered";
+            ViewBag.Message = "List of users currently registered";
             return this.View(users);
         }
 
@@ -35,13 +35,6 @@ namespace DNN_SupportAnalyst_Homework.Controllers
                 email = email,
             };
             return this.View(userModel);
-        }*/
-
-        /*public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }*/
     }
 }

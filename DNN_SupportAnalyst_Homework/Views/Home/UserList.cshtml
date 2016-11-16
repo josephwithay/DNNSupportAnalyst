@@ -7,15 +7,15 @@
 <h3>@ViewBag.Message</h3>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create User", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.firstName)
+            @Html.DisplayNameFor(model => model.name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.lastName)
+            @Html.DisplayNameFor(model => model.userName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.email)
@@ -26,26 +26,22 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.firstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.lastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.joined)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.userName }) |
-            @Html.ActionLink("Details", "Details", new { id=item.userName }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.userName })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.joined)
+            </td>
+        </tr>
+    }
 
 </table>
