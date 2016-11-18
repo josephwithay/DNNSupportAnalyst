@@ -24,17 +24,10 @@ namespace DNN_SupportAnalyst_Homework.Controllers
             return this.View(users);
         }
 
-       /* public ActionResult DisplayList(string fName, string lName, string email, string username)
+        // GET: CreateUser
+        public ActionResult Register()
         {
-            //retrieve user information from database
-            var userModel = new User
-            {
-                firstName = fName,
-                lastName = lName,
-                userName = username,
-                email = email,
-            };
-            return this.View(userModel);
-        }*/
+            return View();
+        }
     }
 }

@@ -17,7 +17,7 @@
  Listener for data-reveal-id attributes
 ----------------------------*/
 
-	$('a[data-reveal-id]').live('click', function(e) {
+	$('a[data-reveal-id]').on('click', function(e) {
 		e.preventDefault();
 		var modalLocation = $(this).attr('data-reveal-id');
 		$('#'+modalLocation).reveal($(this).data());
@@ -31,9 +31,9 @@
         
         
         var defaults = {  
-	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
+	    	animation: 'fade', //fade, fadeAndPop, none
 		    animationspeed: 300, //how fast animtions are
-		    closeonbackgroundclick: true, //if you click background will modal close?
+		    closeonbackgroundclick: false, //if you click background will modal close?
 		    dismissmodalclass: 'close-reveal-modal' //the class of a button or element that will close an open modal
     	}; 
     	

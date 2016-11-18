@@ -6,10 +6,16 @@
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>
-    @Html.ActionLink("Create User", "Create")
-</p>
-<table class="table">
+<a href="#" class="myButton" data-reveal-id="myModal" data-animation="fade">Create User</a>
+<br />
+
+<div id="myModal" class="reveal-modal">
+    <h2>New User Registration</h2>
+    @Html.Action("Register");
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<table id="userlist" class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.name)

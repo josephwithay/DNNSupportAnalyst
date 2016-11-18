@@ -15,7 +15,9 @@ namespace DNN_SupportAnalyst_Homework.Models
     public partial class User
     {
         public int userID { get; set; }
+
         public string firstName { get; set; }
+
         public string lastName { get; set; }
 
         [Display(Name = "Name")]
@@ -28,9 +30,13 @@ namespace DNN_SupportAnalyst_Homework.Models
         }
         [Display(Name = "Username")]
         public string userName { get; set; }
+
         [Display(Name = "E-Mail")]
         public string email { get; set; }
+
         [Display(Name = "Joined")]
-        public Nullable<System.DateTime> joined { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public System.DateTime joined { get; set; }
     }
 }
