@@ -1,0 +1,25 @@
+﻿
+.myButton {
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    padding: 6px 15px;
+    font-size: 16px;
+    line-height: 1.33;
+    border-radius: 6px;
+    float: right;
+}
+
+    .myButton:hover,
+    .myButton:focus,
+    .myButton:active,
+    .myButton.active {
+        color: #ffffff;
+        background-color: #3276b1;
+        border-color: #285e8e;
+        text-decoration: none;
+    }
+
+#userlist {
+    margin-top: 20px;
+}

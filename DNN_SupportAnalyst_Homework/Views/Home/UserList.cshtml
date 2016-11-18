@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DNN_SupportAnalyst_Homework.Models.User>
+
+@{
+    ViewBag.Title = "User List";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<a href="#" class="myButton" data-reveal-id="myModal" data-animation="fade">Create User</a>
+<br />
+
+<div id="myModal" class="reveal-modal">
+    <h2>New User Registration</h2>
+    @Html.Action("Register");
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<table id="userlist" class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.joined)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.joined)
+            </td>
+        </tr>
+    }
+
+</table>
