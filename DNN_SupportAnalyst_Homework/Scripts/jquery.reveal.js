@@ -136,7 +136,7 @@
 			if(options.closeonbackgroundclick) {
 				modalBG.css({"cursor":"pointer"})
 				modalBG.bind('click.modalEvent', function () {
-				  modal.trigger('reveal:close')
+				    modal.trigger('reveal:close')
 				});
 			}
 			$('body').keyup(function(e) {
