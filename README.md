@@ -1,5 +1,5 @@
 # DNNSupportAnalyst
-ASP.Net based web application<br/>
+ASP.Net based web application. Updated project: https://github.com/josephwithay/MyDNNApplication<br/>
 Link to demo video: https://youtu.be/xi_ZmTr2toQ
 <br/>
 Notes:
